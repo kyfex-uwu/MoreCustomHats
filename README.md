@@ -30,7 +30,7 @@ Find the line where it says string path = System.IO.Path.Combine(directoryName, 
 Once you've made these changes compile the project and put its DLL into the mod folder.
 I'm not going to go into details about coding, compiling, and preparing your mod. There's plenty of resources out there.
 
-[![Code tutorial image](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial1.png)]
+[![Code tutorial image](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial1.png)](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial1.png)
 
 ## Next, assets:
 In Unity, create one prefab and one icon for each hat, and put them directly in the Assets folder (their FBX/textures/etc can be anywhere, but prefab and icon must be at the root).
@@ -38,11 +38,11 @@ Associate both prefab and icon with an AssetBundle with a name that matches what
 Build the asset bundles using a simple button ( straight up copy code from here: https://docs.unity3d.com/540/Documentation/Manual/BuildingAssetBundles.html )
 Copy the asset bundle into the mod folder!
 
-[![Assets tutorial image](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial2.png)]
+[![Assets tutorial image](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial2.png)](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial2.png)
 
 ## Building the mod:
 You can make a zip file with the DLL and the asset bundle and all the files which are needed to make a mod (manifest, icon, etc., check the Thunderstore documentation).
 
-[![Final tutorial image](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial3.png)]
+[![Final tutorial image](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial3.png)](https://monamiral.games/wp-content/uploads/VTuberHatsTutorial3.png)
 
 Then you can test the mod by "Loading a Local Mod" in the Thunderstore Mod Manager, and admire the result!
