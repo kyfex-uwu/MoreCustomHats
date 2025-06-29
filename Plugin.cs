@@ -31,7 +31,7 @@ namespace VTuberHats
 				hatOption.requiredAchievement = ACHIEVEMENTTYPE.NONE;
 				customization.hats = customization.hats.AddToArray(hatOption);
 
-				Debug.LogError($"[MonAmiral] {name} added.");
+				Debug.Log($"[MonAmiral] {name} added.");
 
 				return true;
 			}
@@ -42,14 +42,14 @@ namespace VTuberHats
 			{
 				Customization customization = __instance.GetComponent<Customization>();
 
-				Debug.LogError($"[MonAmiral] Adding hat CustomizationOptions.");
+				Debug.Log($"[MonAmiral] Adding hat CustomizationOptions.");
 				for (int i = 0; i < hats.Count; i++)
 				{
 					HatEntry hat = hats[i];
 					CreateHatOption(customization, hat.Name, hat.Icon);
 				}
 
-				Debug.LogError($"[MonAmiral] Done.");
+				Debug.Log($"[MonAmiral] Done.");
 			}
 
 			[HarmonyPatch(typeof(CharacterCustomization), "Awake")]
@@ -58,7 +58,7 @@ namespace VTuberHats
 			{
 				Transform hatsContainer = __instance.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(1).GetChild(1);
 
-				Debug.LogError($"[MonAmiral] Instanciating hats as children of {hatsContainer}.");
+				Debug.Log($"[MonAmiral] Instanciating hats as children of {hatsContainer}.");
 				for (int i = 0; i < hats.Count; i++)
 				{
 					HatEntry hat = hats[i];
