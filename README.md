@@ -1,10 +1,13 @@
 # About
-This mod adds new hats so you can look like your favorite VTuber!<br>
+This mod adds new hats to PEAK!<br>
 It is based on Radsi2's CustomHats mod: https://thunderstore.io/c/peak/p/Radsi2/CustomHats/
 
 # Contents
 - Chibidoki hair & horns. ( https://linktr.ee/chibidoki )
-- More to come! Making this work took a fair amount of time so we'll see what I add next.
+- Criken Timmy controller ( https://www.twitch.tv/criken )
+- Cigarette
+- Buzzball
+- More to come!
 
 # Instructions
 Download the mod with the Thunderstore app and new hats will automatically be added to your passport.<br>

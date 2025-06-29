@@ -5,9 +5,9 @@ using BepInEx;
 using HarmonyLib;
 using UnityEngine;
 
-namespace VTuberHats
+namespace MoreCustomHats
 {
-	[BepInPlugin("monamiral.vtuberhats", "vtuber custom hats", "1.0.0")]
+	[BepInPlugin("monamiral.morecustomhats", "More custom hats", "1.0.0")]
 	public class Plugin : BaseUnityPlugin
 	{
 		public static AssetBundle assetBundle;
@@ -76,7 +76,7 @@ namespace VTuberHats
 
 		public void Awake()
 		{
-			new Harmony("monamiral.vtuberhats").PatchAll(typeof(Patcher));
+			new Harmony("monamiral.morecustomhats").PatchAll(typeof(Patcher));
 			this.StartCoroutine(LoadHatsFromDisk());
 		}
 
@@ -85,7 +85,7 @@ namespace VTuberHats
 			Debug.Log($"[MonAmiral] Loading hats from disk.");
 
 			string directoryName = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-			string path = System.IO.Path.Combine(directoryName, "vtuberhats");
+			string path = System.IO.Path.Combine(directoryName, "morecustomhats");
 
 			Debug.Log($"[MonAmiral] Path to AssetBundle: " + path);
 
@@ -97,6 +97,9 @@ namespace VTuberHats
 
 			hats = new List<HatEntry>();
 			hats.Add(LoadHat("chibidoki"));
+			hats.Add(LoadHat("timmyrobot"));
+			hats.Add(LoadHat("cigarette"));
+			hats.Add(LoadHat("buzzBall"));
 			//hats.Add(LoadHat("reference"));
 
 			Debug.Log($"[MonAmiral] Done!");
