@@ -99,8 +99,21 @@ namespace MoreCustomHats
 			hats.Add(LoadHat("chibidoki"));
 			hats.Add(LoadHat("timmyrobot"));
 			hats.Add(LoadHat("cigarette"));
+			hats.Add(LoadHat("cigaretteweed"));
 			hats.Add(LoadHat("buzzBall"));
-			//hats.Add(LoadHat("reference"));
+			hats.Add(LoadHat("gecko"));
+			hats.Add(LoadHat("applegreen"));
+			hats.Add(LoadHat("appleyellow"));
+			hats.Add(LoadHat("applered"));
+			hats.Add(LoadHat("pepperred"));
+			hats.Add(LoadHat("banana"));
+			hats.Add(LoadHat("hockeymask"));
+			hats.Add(LoadHat("arrow"));
+			hats.Add(LoadHat("dum"));
+			hats.Add(LoadHat("extrahead"));
+			hats.Add(LoadHat("reddhmis"));
+			hats.Add(LoadHat("yellowdhmis"));
+			hats.Add(LoadHat("duckdhmis"));
 
 			Debug.Log($"[MonAmiral] Done!");
 		}

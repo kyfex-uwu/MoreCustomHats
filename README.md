@@ -3,10 +3,17 @@ This mod adds new hats to PEAK!<br>
 It is based on Radsi2's CustomHats mod: https://thunderstore.io/c/peak/p/Radsi2/CustomHats/
 
 # Contents
-- Chibidoki hair & horns. ( https://linktr.ee/chibidoki )
+- Chibidoki hair & horns ( https://linktr.ee/chibidoki )
 - Criken Timmy controller ( https://www.twitch.tv/criken )
-- Cigarette
-- Buzzball
+- Zentreya Gecko hair & horns ( https://www.twitch.tv/zentreya ) by Mao ( https://x.com/MVjagaimo )
+- Tobs hair ( https://www.twitch.tv/Tobs )
+- Cigarette & WEED cigarette
+- Fake arrow headband
+- Hockey mask
+- DUM sticky note
+- Apple, pepper, and banana peel
+- Buzzball by Bombzyz ( https://x.com/Bombzyz )
+- Don't Hug Me I'm Scared plushies by Bombzyz ( https://x.com/Bombzyz )
 - More to come!
 
 # Instructions
