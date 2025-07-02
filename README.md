@@ -14,6 +14,7 @@ It is based on Radsi2's CustomHats mod: https://thunderstore.io/c/peak/p/Radsi2/
 - Apple, pepper, and banana peel
 - Buzzball by Bombzyz ( https://x.com/Bombzyz )
 - Don't Hug Me I'm Scared plushies by Bombzyz ( https://x.com/Bombzyz )
+- Extra head
 - More to come!
 
 # Instructions
@@ -29,6 +30,7 @@ Mods I recommend using with this one:
 
 # Screenshots & videos
 [![Chibidoki, Timmy, cigarette and buzzball picture](https://monamiral.games/wp-content/uploads/MoreHatsPack1.png)](https://monamiral.games/wp-content/uploads/MoreHatsPack1.png)]
+[![More hats](https://monamiral.games/wp-content/uploads/MoreHatsPack2.png)](https://monamiral.games/wp-content/uploads/MoreHatsPack2.png)]
 [![Chibidoki video showcase](https://img.youtube.com/vi/mSxd_n8iQtA/0.jpg)](https://youtu.be/mSxd_n8iQtA)
 
 # How to make your own mod
