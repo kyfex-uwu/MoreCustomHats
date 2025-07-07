@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace MoreCustomHats
 {
-	[BepInPlugin("monamiral.morecustomhats", "More custom hats", "1.0.0")]
+	[BepInPlugin("kyfexuwu.deadsimplehats", "Add your own custom hats", "1.0.0")]
 	public class Plugin : BaseUnityPlugin
 	{
 		public static AssetBundle assetBundle;
@@ -19,7 +19,7 @@ namespace MoreCustomHats
 			{
 				if (Array.Exists(customization.hats, hat => hat.name == name))
 				{
-					Debug.LogError($"[MonAmiral] Trying to add {name} a second time.");
+					Debug.LogError($"[MonAmiral] [Kyfex-DSH] Trying to add {name} a second time.");
 					return false;
 				}
 
@@ -31,7 +31,7 @@ namespace MoreCustomHats
 				hatOption.requiredAchievement = ACHIEVEMENTTYPE.NONE;
 				customization.hats = customization.hats.AddToArray(hatOption);
 
-				Debug.Log($"[MonAmiral] {name} added.");
+				Debug.Log($"[MonAmiral] [Kyfex-DSH] {name} added.");
 
 				return true;
 			}
@@ -42,14 +42,14 @@ namespace MoreCustomHats
 			{
 				Customization customization = __instance.GetComponent<Customization>();
 
-				Debug.Log($"[MonAmiral] Adding hat CustomizationOptions.");
+				Debug.Log($"[MonAmiral] [Kyfex-DSH] Adding hat CustomizationOptions.");
 				for (int i = 0; i < hats.Count; i++)
 				{
 					HatEntry hat = hats[i];
 					CreateHatOption(customization, hat.Name, hat.Icon);
 				}
 
-				Debug.Log($"[MonAmiral] Done.");
+				Debug.Log($"[MonAmiral] [Kyfex-DSH] Done.");
 			}
 
 			[HarmonyPatch(typeof(CharacterCustomization), "Awake")]
@@ -58,7 +58,7 @@ namespace MoreCustomHats
 			{
 				Transform hatsContainer = __instance.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetChild(1).GetChild(1);
 
-				Debug.Log($"[MonAmiral] Instanciating hats as children of {hatsContainer}.");
+				Debug.Log($"[MonAmiral] [Kyfex-DSH] Instanciating hats as children of {hatsContainer}.");
 				for (int i = 0; i < hats.Count; i++)
 				{
 					HatEntry hat = hats[i];
@@ -76,24 +76,24 @@ namespace MoreCustomHats
 
 		public void Awake()
 		{
-			new Harmony("monamiral.morecustomhats").PatchAll(typeof(Patcher));
+			new Harmony("kyfexuwu.deadsimplehats").PatchAll(typeof(Patcher));
 			this.StartCoroutine(LoadHatsFromDisk());
 		}
 
 		private static IEnumerator LoadHatsFromDisk()
 		{
-			Debug.Log($"[MonAmiral] Loading hats from disk.");
+			Debug.Log($"[MonAmiral] [Kyfex-DSH] Loading hats from disk.");
 
 			string directoryName = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 			string path = System.IO.Path.Combine(directoryName, "kyfexcustomhats");
 
-			Debug.Log($"[MonAmiral] Path to AssetBundle: " + path);
+			Debug.Log($"[MonAmiral] [Kyfex-DSH] Path to AssetBundle: " + path);
 
 			AssetBundleCreateRequest createRequest = AssetBundle.LoadFromMemoryAsync(System.IO.File.ReadAllBytes(path));
 			yield return createRequest;
 			assetBundle = createRequest.assetBundle;
 
-			Debug.Log($"[MonAmiral] AssetBundle loaded.");
+			Debug.Log($"[MonAmiral] [Kyfex-DSH] AssetBundle loaded.");
 
 			hats = new List<HatEntry>();
 			var hatNames = assetBundle.GetAllAssetNames().ToList();
@@ -102,17 +102,17 @@ namespace MoreCustomHats
 				hats.Add(LoadHat(hatName));
 			}
 
-			Debug.Log($"[MonAmiral] Done!");
+			Debug.Log($"[MonAmiral] [Kyfex-DSH] Done!");
 		}
 
 		private static HatEntry LoadHat(string hatName)
 		{
-			Debug.Log($"[MonAmiral] Loading hat '{hatName}'.");
+			Debug.Log($"[MonAmiral] [Kyfex-DSH] Loading hat '{hatName}'.");
 
 			GameObject prefab = assetBundle.LoadAsset<GameObject>($"Assets/{hatName}.prefab");
 			Texture2D icon = assetBundle.LoadAsset<Texture2D>($"Assets/{hatName}.png");
 
-			Debug.Log($"[MonAmiral] Loaded prefab {prefab} and texture {icon}");
+			Debug.Log($"[MonAmiral] [Kyfex-DSH] Loaded prefab {prefab} and texture {icon}");
 
 			return new HatEntry(hatName, prefab, icon);
 		}
