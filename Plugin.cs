@@ -85,7 +85,7 @@ namespace MoreCustomHats
 			Debug.Log($"[MonAmiral] Loading hats from disk.");
 
 			string directoryName = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-			string path = System.IO.Path.Combine(directoryName, "morecustomhats");
+			string path = System.IO.Path.Combine(directoryName, "kyfexcustomhats");
 
 			Debug.Log($"[MonAmiral] Path to AssetBundle: " + path);
 
@@ -96,24 +96,11 @@ namespace MoreCustomHats
 			Debug.Log($"[MonAmiral] AssetBundle loaded.");
 
 			hats = new List<HatEntry>();
-			hats.Add(LoadHat("chibidoki"));
-			hats.Add(LoadHat("timmyrobot"));
-			hats.Add(LoadHat("cigarette"));
-			hats.Add(LoadHat("cigaretteweed"));
-			hats.Add(LoadHat("buzzBall"));
-			hats.Add(LoadHat("gecko"));
-			hats.Add(LoadHat("applegreen"));
-			hats.Add(LoadHat("appleyellow"));
-			hats.Add(LoadHat("applered"));
-			hats.Add(LoadHat("pepperred"));
-			hats.Add(LoadHat("banana"));
-			hats.Add(LoadHat("hockeymask"));
-			hats.Add(LoadHat("arrow"));
-			hats.Add(LoadHat("dum"));
-			hats.Add(LoadHat("extrahead"));
-			hats.Add(LoadHat("reddhmis"));
-			hats.Add(LoadHat("yellowdhmis"));
-			hats.Add(LoadHat("duckdhmis"));
+			var hatNames = assetBundle.GetAllAssetNames().ToList();
+			//filter and transform
+   			foreach(var hatName in hatNames){
+				hats.Add(LoadHat(hatName));
+			}
 
 			Debug.Log($"[MonAmiral] Done!");
 		}
